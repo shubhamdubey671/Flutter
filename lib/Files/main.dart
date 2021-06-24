@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Files/Home.dart';
 import 'package:flutter_application_1/Files/login.dart';
+import 'package:flutter_application_1/utility/route.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // import 'package:google_fonts/google_fonts.dart';
@@ -17,6 +18,7 @@ class NyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: ThemeData(
           primarySwatch: Colors.red, fontFamily: GoogleFonts.lato().fontFamily),
+      debugShowCheckedModeBanner: false,
       darkTheme: ThemeData(brightness: Brightness.dark),
 
       initialRoute: "/login",
@@ -24,8 +26,8 @@ class NyApp extends StatelessWidget {
       // home: Home(),
       routes: {
         // "/": (context) => Login_page(),
-        "/home": (context) => Home(),
-        "/login": (context) => Login_page(),
+        MyRoutes.homeRoute: (context) => Home(),
+        MyRoutes.loginRoute: (context) => Login_page(),
       },
     );
   }
